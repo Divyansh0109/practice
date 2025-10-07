@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mentorship MVP — Workflow Slide</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --accent:#2b6cb0;
+    --tech-box:#f3f8ff;
+    --workflow-box:#ffffff;
+    --stroke:#222;
+    --muted:#666;
+    --shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,#fff,#f7fbff);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  .slide{
+    max-width:1280px;margin:24px auto;padding:28px 36px;background:linear-gradient(180deg,#ffffff, #f9fbff);box-shadow:0 8px 40px rgba(0,0,0,0.06);border-radius:12px;position:relative;overflow:hidden;
+  }
+  .title{
+    font-family:Merriweather,serif;font-size:40px;color:#0b2545;text-align:center;letter-spacing:1px;margin:6px 0 22px;
+  }
+
+  .canvas{
+    display:flex;gap:28px;align-items:flex-start;
+  }
+
+  /* Left tech column */
+  .tech{
+    width:220px;
+    display:flex;flex-direction:column;gap:12px;
+    align-items:flex-start;
+  }
+  .tech .label{
+    font-weight:700;background:#fff;padding:8px 12px;border-radius:6px;border:3px solid #0b2545;color:#0b2545;box-shadow:var(--shadow);font-size:14px;margin-bottom:8px;
+  }
+  .tech .chip{
+    width:100%;background:var(--tech-box);border-radius:10px;padding:10px 12px;border:3px solid rgba(0,0,0,0.06);box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-weight:600;
+  }
+  .tech .chip img{width:28px;height:28px;object-fit:contain;filter:grayscale(0.05);}
+
+  /* center workflow */
+  .workflow{
+    flex:1;display:flex;flex-direction:column;align-items:center;gap:16px;
+  }
+  .system-label{
+    font-weight:700;background:#fff;padding:8px 16px;border-radius:6px;border:3px solid #111;color:#111;box-shadow:var(--shadow);font-size:16px;
+  }
+  .flow-svg{width:100%;height:520px;}
+  /* right features column */
+  .features{width:300px;display:flex;flex-direction:column;gap:14px;align-items:flex-end;}
+  .feature-card{
+    width:260px;background:#fff;border-radius:8px;padding:10px;border:3px solid rgba(11,37,69,0.12);box-shadow:var(--shadow);font-size:13px;font-weight:600;
+  }
+  .feature-card .num{font-weight:700;color:var(--accent);margin-right:8px;}
+
+  /* footer summary */
+  .footer{
+    margin-top:18px;padding-top:12px;border-top:1px dashed rgba(11,37,69,0.06);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;
+  }
+
+  /* small responsive tweak */
+  @media (max-width:1000px){
+    .canvas{flex-direction:column;align-items:center;}
+    .tech,.features{width:100%;flex-direction:row;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .feature-card{width:44%;}
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="title">TECHNICAL APPROACH</div>
+
+    <div class="canvas">
+      <!-- LEFT: TECH USED -->
+      <div class="tech" aria-hidden="true">
+        <div class="label">TECH USED</div>
+        <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react logo"> React</div>
+        <div class="chip"><img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss-site/main/src/assets/logos/tailwindcss.svg" alt="tailwind"> Tailwind CSS</div>
+        <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="ts"> TypeScript / Node.js</div>
+        <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="db"> Supabase / Postgres</div>
+        <div class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="google"> Google Calendar API</div>
+        <div class="chip"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--q7nq5tqH--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://cdn.worldvectorlogo.com/logos/sendgrid.svg" alt="sendgrid"> SendGrid (Email)</div>
+        <div class="chip"><img src="https://www.svgrepo.com/show/354380/video-call.svg" alt="video"> Whereby / Daily.co</div>
+      </div>
+
+      <!-- CENTER: SYSTEM WORKFLOW (SVG) -->
+      <div class="workflow">
+        <div class="system-label">SYSTEM WORKFLOW</div>
+
+        <!-- SVG diagram -->
+        <svg class="flow-svg" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="System workflow chart">
+          <defs>
+            <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+            </filter>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#3a6fb0" />
+            </marker>
+            <style>
+              .box { fill:#fff; stroke:#0b2545; stroke-width:3; rx:10; ry:10; filter:url(#softShadow);}
+              .box-title { font:600 14px 'Inter',sans-serif; fill:#0b2545; }
+              .box-sub { font:500 12px 'Inter',sans-serif; fill:#333; }
+              .muted { font:500 11px 'Inter',sans-serif; fill:#666; }
+              .connector { stroke:#3a6fb0; stroke-width:4; fill:none; marker-end:url(#arrow); opacity:0.95; }
+            </style>
+          </defs>
+
+          <!-- Center column boxes -->
+          <!-- Entry -->
+          <g transform="translate(300,20)">
+            <rect class="box" x="0" y="0" width="400" height="72" rx="10" ry="10"></rect>
+            <text class="box-title" x="20" y="26">Entry & Init</text>
+            <text class="box-sub" x="20" y="48">index.php/session starts, configs load, institution resolved</text>
+          </g>
+
+          <!-- Routing -->
+          <g transform="translate(300,120)">
+            <rect class="box" x="0" y="0" width="400" height="72" rx="10" ry="10"></rect>
+            <text class="box-title" x="20" y="26">Routing</text>
+            <text class="box-sub" x="20" y="48">Routes → controller & method selected → context applied</text>
+          </g>
+
+          <!-- Auth (to right of routing) -->
+          <g transform="translate(720,120)">
+            <rect class="box" x="-380" y="0" width="360" height="72" rx="10" ry="10"></rect>
+            <text class="box-title" x="-360" y="26">Authentication</text>
+            <text class="box-sub" x="-360" y="48">Role-based access (Alumni/Admin/Super) with session validation</text>
+          </g>
+
+          <!-- Right feature boxes (stack) -->
+          <!-- We'll draw grouped small boxes on right -->
+          <g transform="translate(760,220)" >
+            <rect x="-6" y="0" width="260" height="60" rx="8" ry="8" fill="#fff" stroke="#5b2f8a" stroke-width="3" filter="url(#softShadow)"></rect>
+            <text class="box-title" x="8" y="22" fill="#5b2f8a">1. Onboarding</text>
+            <text class="muted" x="8" y="42">Registration → Plan → PayU → Activation</text>
+          </g>
+
+          <g transform="translate(760,300)" >
+            <rect x="-6" y="0" width="260" height="60" rx="8" ry="8" fill="#fff" stroke="#0b2545" stroke-width="3" filter="url(#softShadow)"></rect>
+            <text class="box-title" x="8" y="22" fill="#0b2545">2. User Login</text>
+            <text class="muted" x="8" y="42">Auth → Login/OAuth → Role Dashboards</text>
+          </g>
+
+          <g transform="translate(760,380)" >
+            <rect x="-6" y="0" width="260" height="60" rx="8" ry="8" fill="#fff" stroke="#d07a00" stroke-width="3" filter="url(#softShadow)"></rect>
+            <text class="box-title" x="8" y="22" fill="#d07a00">3. Payments</text>
+            <text class="muted" x="8" y="42">Subscriptions/Events → PayU → Confirmation</text>
+          </g>
+
+          <!-- Bottom key component / summary -->
+          <g transform="translate(150,360)">
+            <rect class="box" x="0" y="0" width="300" height="100" rx="12" ry="12"></rect>
+            <text class="box-title" x="16" y="30">Key Component</text>
+            <text class="muted" x="16" y="52">MVC router, AuthGuard, Multi-tenancy, PayU, OAuth, Role-based Access</text>
+            <text class="muted" x="16" y="72">PDO, Automated Campaigns</text>
+          </g>
+
+          <!-- Connectors between center boxes -->
+          <path class="connector" d="M500 92 L500 120" />
+          <path class="connector" d="M500 192 L500 220" />
+
+          <!-- Connector to Authentication -->
+          <path class="connector" d="M630 156 Q680 156 720 156" />
+
+          <!-- Connector from auth to right stack -->
+          <path class="connector" d="M720 156 L720 200 L760 200" />
+
+          <!-- Connector from Entry to Left (to tech) -->
+          <path class="connector" d="M300 56 L200 56" />
+
+          <!-- Connector from center bottom to key component -->
+          <path class="connector" d="M500 220 L450 220 L450 360" />
+
+          <!-- Small labels -->
+          <text class="muted" x="38" y="28" font-size="12">Request → Routing → Auth → Business Logic → DB Ops → Payment → Response → Error Handling</text>
+
+        </svg>
+
+      </div>
+
+      <!-- RIGHT: FEATURE BOXES -->
+      <div class="features" aria-hidden="true">
+        <div class="feature-card"><span class="num">4.</span>Content Management — Events, Jobs, Campaigns CRUD</div>
+        <div class="feature-card"><span class="num">5.</span>Multi-Tenant Isolation — DB filters per institution</div>
+        <div class="feature-card"><span class="num">6.</span>Automated Campaigns — CRON → Reminders/SMTP</div>
+        <div class="feature-card"><span class="num">7.</span>Error Handling — 404/403/302, Payment & DB rollback</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Frontend: React + Tailwind • Backend: Node/Express • DB: Supabase/Postgres</div>
+      <div>Export: PNG/PPTX for slides</div>
+    </div>
+  </div>
+</body>
+</html>
