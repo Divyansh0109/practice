@@ -1,0 +1,126 @@
+:root {
+  --accent:#2b6cb0;
+  --shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background:#fff;
+  margin:0;
+}
+
+.slide {
+  max-width:1100px;
+  margin:20px auto;
+  padding:20px 24px;
+}
+
+.title {
+  font-family:Merriweather, serif;
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  color:#0b2545;
+  margin-bottom:20px;
+}
+
+.canvas {
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
+
+/* Tech Used */
+.tech {
+  width:180px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.tech .label {
+  font-weight:600;
+  border:1.5px solid #0b2545;
+  border-radius:6px;
+  padding:6px 10px;
+  font-size:12px;
+  color:#0b2545;
+  text-align:center;
+}
+.tech .chip {
+  background:#f8fbff;
+  border-radius:8px;
+  padding:6px 10px;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  box-shadow:var(--shadow);
+}
+.tech .chip img {
+  width:20px;
+  height:20px;
+}
+
+/* Workflow */
+.workflow {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.system-label {
+  font-weight:600;
+  font-size:13px;
+  border:1.5px solid #111;
+  border-radius:6px;
+  padding:6px 10px;
+  margin-bottom:8px;
+}
+.workflow-box {
+  background:#fff;
+  border:1.5px solid rgba(0,0,0,0.15);
+  border-radius:6px;
+  padding:8px 12px;
+  font-size:13px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.workflow-box span {
+  font-size:11px;
+  color:#555;
+  display:block;
+  margin-top:2px;
+}
+
+/* Features */
+.features {
+  width:240px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.feature-card {
+  background:#fff;
+  border:1.5px solid rgba(0,0,0,0.12);
+  border-radius:6px;
+  padding:8px 10px;
+  font-size:12px;
+  box-shadow:var(--shadow);
+}
+.feature-card .num {
+  color:var(--accent);
+  font-weight:700;
+  margin-right:4px;
+}
+
+/* Footer */
+.footer {
+  margin-top:12px;
+  padding-top:8px;
+  border-top:1px dashed #ccc;
+  font-size:11px;
+  color:#666;
+  display:flex;
+  justify-content:space-between;
+}
