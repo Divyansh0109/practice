@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float m_consume  ,c_consume,o_consume,hours,
-    rate;
+    float m_consume  ,c_consume,o_consume,hours,rate;
     float total_consume_hr, total_consume_day,mothly_consumed,mothly_bill;
 
     printf("Enter power consumed by monitor (in Wh): ");
@@ -28,5 +27,5 @@ int main() {
 
     printf("Monthly Payable bill: %.2f\n", mothly_bill);
 
-    return 0;
+    return 0;~
 }
