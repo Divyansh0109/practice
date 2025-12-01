@@ -1,0 +1,129 @@
+/* Import a modern font (optional, works only if added in <head>) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top left, #4f46e5, #111827);
+    color: #111827;
+}
+
+/* Login Card */
+.login {
+    width: 100%;
+    max-width: 380px;
+    padding: 32px 28px;
+    border-radius: 18px;
+    background: rgba(17, 24, 39, 0.9);        /* dark glass card */
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(156, 163, 175, 0.4);
+    color: #f9fafb;
+}
+
+/* Heading */
+.login h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.login p.subtitle {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* Labels */
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #e5e7eb;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #374151;
+    background: rgba(15, 23, 42, 0.9);
+    color: #f9fafb;
+    font-size: 14px;
+    transition: border 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease, background 0.2s ease;
+}
+
+input::placeholder {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: rgba(17, 24, 39, 1);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.7);
+    transform: translateY(-1px);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 11px 0;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    color: white;
+    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.45);
+    transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    margin-top: 4px;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 40px rgba(99, 102, 241, 0.6);
+    filter: brightness(1.05);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 10px 22px rgba(99, 102, 241, 0.4);
+}
+
+/* Error text (if you want to show errors in page instead of alert) */
+.error {
+    color: #f97373;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Small screen tweaks */
+@media (max-width: 480px) {
+    .login {
+        margin: 0 16px;
+        padding: 24px 20px;
+    }
+
+    .login h2 {
+        font-size: 20px;
+    }
+}
